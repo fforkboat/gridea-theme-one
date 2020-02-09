@@ -1,0 +1,24 @@
+<div class="footer">
+  <%if(site.customConfig.footerMenu){%>
+  <div class="menu">
+    <%menus.forEach(function(menu){%>
+    <%if(menu.openType==='External' ){%>
+    <a href="<%= menu.link %>" class="menu" target="_blank"><%=menu.name%></a>
+    <%}else{%>
+    <a href="<%= menu.link %>" class="menu"><%=menu.name%></a>
+    <%}%>
+    <%});%>
+  </div>
+  <%}%>
+  <div class="powered_by">
+    <a href="https://github.com/tangkaichuan/gridea-theme-one" target="_blank">Theme One,</a>
+    <a href="https://gridea.dev/" target="_blank">Powered by Gridea&#65281;</a>
+  </div>
+  <div class="footer_slogan">
+    <%- themeConfig.siteDescription %>
+</div>
+<div id="back_to_top" class="back_to_top">
+  <span>△</span>
+</div>
+<script src="<%= themeConfig.domain %>/media/scripts/backToTop.js"></script>
+</div>
