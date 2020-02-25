@@ -46,7 +46,7 @@
     },
     {
       "name": "copyright",
-      "label": "是否在文末显示转载声明",
+      "label": "在文末显示原文地址",
       "group": "展示",
       "value": false,
       "type": "switch"
