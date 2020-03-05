@@ -15,10 +15,12 @@
       <div class="post_footer">
         <div class="meta">
           <div class="info">
-            <span class="field">
-              <i class="fa fa-sun-o"></i>
-              <span class="date"><%=post.dateFormat%>, <%=post.stats.words%> words</span>
-            </span>
+            <div class="article-infos">
+              <i class="fa fa-font"></i>
+              <span class="article-info"><%=post.stats.words%></span>
+              <i class="fa fa-sun"></i>
+              <span class="article-info"><%=post.dateFormat%></span>
+            </div>
             <%if(post.tags.length > 0) { %>
             <span class="field tags">
               <i class="fa fa-flask"></i>
@@ -28,7 +30,7 @@
             </span>
             <%}%>
           </div>
-         </div>
+        </div>
       </div>
     </div>
   </div>
