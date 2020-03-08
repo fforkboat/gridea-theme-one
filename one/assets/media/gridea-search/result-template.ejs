@@ -16,16 +16,16 @@
         <div class="meta">
           <div class="info">
             <div class="article-infos">
-              <i class="fa fa-font"></i>
+              <i class="iconfont icon-words-sm"></i>
               <span class="article-info"><%=post.stats.words%></span>
-              <i class="fa fa-sun"></i>
+              <i class="iconfont icon-time-sm"></i>
               <span class="article-info"><%=post.dateFormat%></span>
             </div>
             <%if(post.tags.length > 0) { %>
             <span class="field tags">
-              <i class="fa fa-flask"></i>
+              <i class="iconfont icon-tag-sm"></i>
               <%post.tags.forEach(function(tag){%>
-              <a href="<%= tag.link %>" class="tag"><%=tag.name%></a>
+              <a href="<%= tag.link %>" class="article-info"><%=tag.name%></a>
               <%});%>
             </span>
             <%}%>

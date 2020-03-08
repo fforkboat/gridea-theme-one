@@ -10,9 +10,11 @@
     <%[ 'github', 'twitter', 'weibo', 'instagram', 'telegram'].forEach((item)=>{%>
     <%if(site.customConfig[item]){%>
     <a href="<%= site.customConfig[item] %>" target="_blank">
-      <i class="fab fa-<%= item %>"></i></a>
+      <i class="iconfont icon-<%= item %>"></i></a>
     <%}%>
           <%})%>
+    <a href="/atom.xml" target="_blank">
+      <i class="iconfont icon-rss"></i></a>
   </div>
 </div>
 <%if(!site.customConfig.footerMenu){%>
