@@ -1,3 +1,4 @@
+//回到顶部
 (function () {
     var backTop = document.getElementById("back_to_top");
     window.onscroll = function () {
@@ -19,3 +20,12 @@
         }, 16)
     }
 })();
+
+//表格滚动条
+[].slice.call(document.querySelectorAll('table')).forEach(function(el){
+    var wrapper = document.createElement('div');
+    wrapper.className = 'table-area';
+    el.parentNode.insertBefore(wrapper, el);
+    el.parentNode.removeChild(el);
+    wrapper.appendChild(el);
+})

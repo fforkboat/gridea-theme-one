@@ -3,6 +3,9 @@ html,body{
   height:100%;
   overflow-x:hidden;
 }
+.table-area {
+    overflow: auto;
+}
 figure{
   margin:0!important;
   text-align:center;
@@ -372,6 +375,7 @@ figure{
 .markdown table th {
   font-weight: bold;
   background-color: #FDFDFD;
+  white-space: nowrap;
 }
 .markdown tr th {
   border-bottom-width: 1px;
@@ -394,6 +398,9 @@ figure{
 .markdown table tbody > tr:nth-child(odd) > td,
 .markdown table tbody > tr:nth-child(odd) > th {
   background-color: #F9F9F9;
+}
+table td:nth-child(1) {
+  white-space: nowrap; 
 }
 .markdown .gist {
   font-size: 12px;
