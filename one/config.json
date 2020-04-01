@@ -4,7 +4,7 @@
   "author": "tangkaichuan",
   "repository": "https://github.com/tangkaichuan/gridea-theme-one",
   "customConfig": [
-   {
+    {
       "name": "github",
       "label": "Github",
       "group": "社交",
@@ -59,12 +59,11 @@
       "type": "switch"
     },
     {
-      "name": "ga",
-      "label": "跟踪 ID",
-      "group": "谷歌统计",
-      "value": "",
-      "type": "input",
-      "note": "UA-xxxxxxxxx-x"
+      "name": "busuanzi",
+      "label": "不算子访问统计",
+      "group": "统计",
+      "value": false,
+      "type": "switch"
     }
   ]
 }

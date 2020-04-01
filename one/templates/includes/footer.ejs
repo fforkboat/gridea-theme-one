@@ -21,4 +21,14 @@
   <span>△</span>
 </div>
 <script src="<%= themeConfig.domain %>/media/scripts/util.js"></script>
+<%if(site.customConfig.busuanzi){%>
+<script>
+  console.log(location.pathname.split('/').length);
+  if (location.pathname.split('/').length > 2) {
+    document.write('<span class="statistic" id="busuanzi_container_page_pv">本文总阅读量 <span id="busuanzi_value_page_pv"></span> 次</span>');
+  } else {
+    document.write('<span class="statistic" id="busuanzi_container_site_pv">本站总访问量 <span id="busuanzi_value_site_pv"></span> 次</span>');
+  }
+</script>
+<%}%>
 </div>
