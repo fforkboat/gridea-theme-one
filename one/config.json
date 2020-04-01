@@ -60,8 +60,8 @@
     },
     {
       "name": "busuanzi",
-      "label": "不算子访问统计",
-      "group": "统计",
+      "label": "不蒜子访问统计",
+      "group": "展示",
       "value": false,
       "type": "switch"
     }
