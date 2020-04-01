@@ -23,8 +23,12 @@
 <script src="<%= themeConfig.domain %>/media/scripts/util.js"></script>
 <%if(site.customConfig.busuanzi){%>
 <script>
-  if (location.pathname.split('/').length > 2) {
-    document.write('<span class="statistic" id="busuanzi_container_page_pv">本文总阅读量 <span id="busuanzi_value_page_pv"></span> 次</span>');
+  var isNotHome = location.pathname.split('/').length > 2;
+  var isPage = location.pathname.split('/page/').length === 2;
+  var isArchives = location.pathname.split('/archives/').length === 2;
+  var isTags = location.pathname.split('/tags/').length === 2;
+  if (isNotHome && !isPage && !isArchives && !isTags) {
+    document.write('<span class="statistic" id="busuanzi_container_page_pv">本页总阅读量 <span id="busuanzi_value_page_pv"></span> 次</span>');
   } else {
     document.write('<span class="statistic" id="busuanzi_container_site_pv">本站总访问量 <span id="busuanzi_value_site_pv"></span> 次</span>');
   }
