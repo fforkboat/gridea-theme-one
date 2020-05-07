@@ -4,6 +4,9 @@
     <div class="post animated fadeInDown">
       <div class="post_title">
         <h2>
+          <% if(post.isTop) { %>
+          <i class="iconfont icon-top"></i>
+          <%};%>
           <a href="<%= post.link %>"><%=post.title%></a>
         </h2>
       </div>
@@ -21,7 +24,7 @@
               <i class="iconfont icon-time-sm"></i>
               <span class="article-info"><%=post.dateFormat%></span>
             </div>
-            <%if(post.tags.length > 0) { %>
+            <% if(post.tags.length > 0) { %>
             <span class="field tags">
               <i class="iconfont icon-tag-sm"></i>
               <%post.tags.forEach(function(tag){%>

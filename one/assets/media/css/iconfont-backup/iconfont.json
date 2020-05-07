@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "10519680",
+      "name": "钉住置顶",
+      "font_class": "top",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
       "icon_id": "8554889",
       "name": "instagram-fill",
       "font_class": "instagram",
