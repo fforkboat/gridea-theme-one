@@ -5,9 +5,32 @@
   <%-include( './includes/head',{siteTitle:`${post.title} | ${themeConfig.siteName}`})%>
   <meta name="description" content="<%- post.description %>" />
   <meta name="keywords" content="<%- post.tags.map(tag => tag.name).join(',') %>" />
+
+  <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/2.3.1/css/bootstrap.css" rel="stylesheet">
+  <link href="<%= themeConfig.domain %>/media/css/jquery.tocify.css" rel="stylesheet">
+
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="<%= themeConfig.domain %>/media/scripts/jquery.ui.core.js"></script>
+  <script src="<%= themeConfig.domain %>/media/scripts/bootstrap.js"></script>
+  <script src="<%= themeConfig.domain %>/media/scripts/jquery.tocify.js"></script>
+
+  <style>
+    #toc .nav-list > .active > a{
+      color: #007fff;
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+      background-color: #ebedef;
+    }
+    #toc a {
+      color: #000000;
+    }
+    #toc {
+      border: 0;
+    }
+  </style>
 </head>
 
-<body>
+<body style="height: auto">
+  <div id="toc" style="right: 20px; top: 80px"></div>
   <div class="main animated">
     <%-include( './includes/header')%>
     <div class="autopagerize_page_element">
@@ -15,7 +38,7 @@
         <div class="post_page">
           <div class="post animated fadeInDown">
             <div class="post_title post_detail_title">
-              <h2>
+              <h1 class="indicator-free">
                 <a>
                   <%=post.title%></a>
               </h2>
@@ -71,7 +94,12 @@
   <%-include( './includes/footer')%>
   <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/default.min.css">
   <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+    hljs.initHighlightingOnLoad();
+    $(function() {
+        $("#toc").tocify({ selectors: "h2, h3, h4" });
+    });
+  </script>
 </body>
 
 </html>

@@ -3674,7 +3674,38 @@ h4,
 h5,
 h6 {
   text-rendering: optimizeLegibility;
+  position: relative;
 }
+
+h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
+  position: absolute;
+  right: calc(100% + .75em);
+  top: 0;
+  color: #b4b4b4;
+  font-size: 1rem;
+  font-weight: bold;
+  font-variant: 'small-caps';
+}
+
+h2:not(.indicator-free)::after {
+  content: 'H2';
+  top: 0.03rem;
+  width: 24px;
+}
+
+h3::after {
+  content: 'H3';
+  top: 0.03rem;
+  width: 24px;
+}
+
+h4::after {
+  content: 'H4';
+  top: 0.03rem;
+  width: 24px;
+}
+
+
 .main {
   background: #FFFFFF;
   box-shadow: 0px 10px 20px 0px rgba(236, 236, 236, 0.86);
